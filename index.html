@@ -89,7 +89,7 @@ nav{
 .hero-bottom{
   position:absolute;bottom:60px;left:32px;right:32px;
   display:flex;justify-content:space-between;align-items:flex-end;
-  z-index:2;
+  z-index:3;
 }
 .hero-tag{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;
@@ -409,6 +409,8 @@ footer{
   .scroll-line{height:30px}
   .honest{grid-template-columns:1fr;gap:48px;padding:80px 20px}
   .honest::before{display:none}
+  [data-reveal-left]{transform:translateX(-30px)}
+  [data-reveal-right]{transform:translateX(30px)}
   .project-section{padding:0 20px 80px}
   .project-showcase{grid-template-columns:1fr}
   .project-visual{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -444,13 +446,11 @@ footer{
 </nav>
 
 <section class="hero">
-  <video class="hero-video-bg" autoplay muted loop playsinline>
-    <source src="../uploads/orange_white_streak_animation_web-e0331432.mp4" type="video/mp4">
-  </video>
   <div>
     <div class="hero-line"><h1><span>I design</span></h1></div>
     <div class="hero-line"><h1><span class="italic">websites</span> <span class="outline">that</span></h1></div>
     <div class="hero-line"><h1><span>people</span> <span class="italic">remember.</span></h1></div>
+    <div class="hero-tag" style="margin-top:24px;">Crafting digital experiences that resonate with people and drive results for brands.</div>
   </div>
   <div class="scroll-hint" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);">
     <span>Scroll</span>
