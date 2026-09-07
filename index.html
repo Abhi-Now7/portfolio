@@ -251,6 +251,44 @@ nav{
 .project-link svg{position:relative;z-index:1;transition:transform .3s}
 .project-link:hover svg{transform:translate(3px,-3px)}
 
+/* spec projects grid */
+.spec-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  margin-top:32px;
+}
+.spec-card{
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;overflow:hidden;
+  background:#0a0a0a;
+}
+.spec-visual{
+  position:relative;overflow:hidden;
+  aspect-ratio:3/2;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:#080808;
+}
+.spec-visual video{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.spec-badge{
+  position:absolute;top:16px;left:16px;
+  background:rgba(5,5,5,.7);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.08);
+  padding:6px 12px;border-radius:99px;
+  font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(232,228,223,.6);
+}
+.spec-info{
+  padding:28px 24px;
+}
+.spec-info h5{
+  font-family:'Instrument Serif',serif;
+  font-size:26px;font-weight:400;margin-bottom:12px;
+}
+.spec-info p{
+  font-size:13.5px;line-height:1.7;color:rgba(232,228,223,.5);font-weight:300;
+}
+
 /* skills ticker */
 .skills{
   padding:80px 32px;
@@ -349,6 +387,7 @@ footer{
 
 /* responsive */
 @media(max-width:768px){
+  .spec-grid{grid-template-columns:1fr}
   nav{padding:16px 20px}
   .nav-right{gap:18px}
   .hero{padding:0 20px}
@@ -428,7 +467,7 @@ footer{
 <section class="project-section" id="work">
   <div class="section-head" data-reveal>
     <h3>The work so far</h3>
-    <span>01 project — more coming</span>
+    <span>01 deployed project + 02 spec builds</span>
   </div>
 
   <div class="project-showcase" data-reveal>
@@ -452,6 +491,37 @@ footer{
         <span>Visit the live store</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </a>
+    </div>
+  </div>
+
+  <div class="section-head" data-reveal style="margin-top:120px; padding-bottom:30px">
+    <h3 style="font-size: clamp(24px, 3.5vw, 36px);">Explorations & Spec Work</h3>
+    <span>Coded exclusively for the portfolio</span>
+  </div>
+
+  <div class="spec-grid">
+    <div class="spec-card" data-reveal>
+      <div class="spec-visual">
+         <video src="sample1.mp4" autoplay loop muted playsinline></video>
+         <div class="video-grain"></div>
+         <div class="spec-badge">Spec Work</div>
+      </div>
+      <div class="spec-info">
+        <h5>Concept Alpha</h5>
+        <p>A layout experimentation focusing on fluid typography and stark contrasts. Built purely to push boundaries and test new interaction patterns.</p>
+      </div>
+    </div>
+
+    <div class="spec-card" data-reveal>
+      <div class="spec-visual">
+         <video src="sample2.mp4" autoplay loop muted playsinline></video>
+         <div class="video-grain"></div>
+         <div class="spec-badge">Spec Work</div>
+      </div>
+      <div class="spec-info">
+        <h5>Concept Beta</h5>
+        <p>Exploring high-performance video integrations and asymmetric grids. Designed and coded as a technical playground for modern frontend capabilities.</p>
+      </div>
     </div>
   </div>
 </section>
