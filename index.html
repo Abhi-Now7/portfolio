@@ -58,8 +58,20 @@ nav{
   position:relative;
   overflow:hidden;
 }
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.85) 100%);
+  z-index:2;pointer-events:none;
+}
+.hero-video-bg{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;opacity:1;
+}
+.hero > div, .hero-bottom{
+  position:relative;z-index:3;
+}
 .hero-line{
-  overflow:hidden;
+  overflow:hidden;margin-bottom:8px;
 }
 .hero h1{
   font-family:'Instrument Serif',serif;
@@ -75,17 +87,18 @@ nav{
 }
 
 .hero-bottom{
-  position:absolute;bottom:28px;left:32px;right:32px;
+  position:absolute;bottom:60px;left:32px;right:32px;
   display:flex;justify-content:space-between;align-items:flex-end;
+  z-index:2;
 }
 .hero-tag{
-  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(232,228,223,.4);max-width:280px;line-height:1.7;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(232,228,223,.65);max-width:280px;line-height:1.7;
 }
 .scroll-hint{
   display:flex;flex-direction:column;align-items:center;gap:8px;
-  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(232,228,223,.35);
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(232,228,223,.6);
 }
 .scroll-line{width:1px;height:40px;background:rgba(255,255,255,.12);position:relative;overflow:hidden}
 .scroll-line::after{
@@ -109,7 +122,7 @@ nav{
 }
 .marquee-inner span{
   font-family:'Instrument Serif',serif;font-style:italic;
-  font-size:16px;color:rgba(232,228,223,.25);
+  font-size:16px;color:rgba(232,228,223,.5);
   display:inline-flex;align-items:center;gap:48px;
 }
 .marquee-inner span::after{content:'✦';font-style:normal;font-size:8px}
@@ -134,7 +147,7 @@ nav{
 .honest-left h2 i{color:#ff6b35}
 .honest-left p{
   margin-top:24px;font-size:15px;line-height:1.85;
-  color:rgba(232,228,223,.55);font-weight:300;
+  color:rgba(232,228,223,.75);font-weight:300;
   max-width:440px;
 }
 .honest-right{padding-top:8px}
@@ -148,8 +161,8 @@ nav{
   color:#ff6b35;line-height:1;
 }
 .stat-block .label{
-  font-size:12px;letter-spacing:.06em;
-  color:rgba(232,228,223,.4);margin-top:8px;
+  font-size:13px;letter-spacing:.06em;
+  color:rgba(232,228,223,.65);margin-top:8px;
 }
 
 /* project section */
@@ -166,7 +179,7 @@ nav{
   font-family:'Instrument Serif',serif;font-size:clamp(28px,3.5vw,44px);
   font-weight:400;letter-spacing:-.02em;
 }
-.section-head span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,228,223,.3)}
+.section-head span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,228,223,.65)}
 
 .project-showcase{
   display:grid;grid-template-columns:1.1fr .9fr;gap:0;
@@ -195,9 +208,9 @@ nav{
   background:rgba(5,5,5,.7);backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,.08);
   padding:8px 14px;border-radius:99px;
-  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   display:flex;align-items:center;gap:8px;
-  color:rgba(232,228,223,.7);
+  color:rgba(232,228,223,.85);
 }
 .live-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -206,7 +219,7 @@ nav{
   padding:40px 36px;display:flex;flex-direction:column;
 }
 .project-info .kicker{
-  font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:#ff6b35;margin-bottom:20px;
 }
 .project-info h4{
@@ -215,16 +228,16 @@ nav{
 }
 .project-info h4 i{font-style:italic;color:#ff6b35}
 .project-info .desc{
-  margin-top:16px;font-size:14px;line-height:1.8;color:rgba(232,228,223,.5);
+  margin-top:16px;font-size:14px;line-height:1.8;color:rgba(232,228,223,.75);
   font-weight:300;flex:1;
 }
 .tech-row{
   display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;
 }
 .tech-row span{
-  font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;
   padding:6px 12px;border-radius:99px;
-  border:1px solid rgba(255,255,255,.08);color:rgba(232,228,223,.5);
+  border:1px solid rgba(255,255,255,.08);color:rgba(232,228,223,.7);
   transition:border-color .3s, color .3s;
 }
 .tech-row span:hover{border-color:rgba(255,107,53,.3);color:#ff6b35}
@@ -275,7 +288,7 @@ nav{
   background:rgba(5,5,5,.7);backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,.08);
   padding:6px 12px;border-radius:99px;
-  font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(232,228,223,.6);
 }
 .spec-info{
@@ -286,7 +299,7 @@ nav{
   font-size:26px;font-weight:400;margin-bottom:12px;
 }
 .spec-info p{
-  font-size:13.5px;line-height:1.7;color:rgba(232,228,223,.5);font-weight:300;
+  font-size:13.5px;line-height:1.7;color:rgba(232,228,223,.7);font-weight:300;
 }
 
 /* skills ticker */
@@ -306,11 +319,11 @@ nav{
 }
 .skill-card:hover{background:#0c0c0c}
 .skill-card h5{
-  font-size:13px;font-weight:500;letter-spacing:.02em;
+  font-size:14px;font-weight:500;letter-spacing:.02em;
   margin-bottom:10px;
 }
 .skill-card p{
-  font-size:12.5px;line-height:1.7;color:rgba(232,228,223,.38);font-weight:300;
+  font-size:13px;line-height:1.7;color:rgba(232,228,223,.65);font-weight:300;
 }
 .skill-card .corner{
   position:absolute;top:0;right:0;
@@ -339,7 +352,7 @@ nav{
 .contact h2 i{font-style:italic;color:#ff6b35}
 .contact p{
   margin:24px auto 0;max-width:480px;
-  font-size:14.5px;line-height:1.8;color:rgba(232,228,223,.45);font-weight:300;
+  font-size:14.5px;line-height:1.8;color:rgba(232,228,223,.7);font-weight:300;
 }
 .contact-links{
   margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
@@ -365,8 +378,8 @@ footer{
   padding:24px 32px;
   border-top:1px solid rgba(255,255,255,.04);
   display:flex;justify-content:space-between;align-items:center;
-  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(232,228,223,.2);flex-wrap:wrap;gap:12px;
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(232,228,223,.55);flex-wrap:wrap;gap:12px;
 }
 
 /* reveal animations */
@@ -391,6 +404,9 @@ footer{
   nav{padding:16px 20px}
   .nav-right{gap:18px}
   .hero{padding:0 20px}
+  .hero h1{font-size:clamp(32px,8vw,60px)}
+  .scroll-hint{font-size:10px}
+  .scroll-line{height:30px}
   .honest{grid-template-columns:1fr;gap:48px;padding:80px 20px}
   .honest::before{display:none}
   .project-section{padding:0 20px 80px}
@@ -428,17 +444,17 @@ footer{
 </nav>
 
 <section class="hero">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="../uploads/orange_white_streak_animation_web-e0331432.mp4" type="video/mp4">
+  </video>
   <div>
     <div class="hero-line"><h1><span>I design</span></h1></div>
     <div class="hero-line"><h1><span class="italic">websites</span> <span class="outline">that</span></h1></div>
     <div class="hero-line"><h1><span>people</span> <span class="italic">remember.</span></h1></div>
   </div>
-  <div class="hero-bottom">
-    <div class="hero-tag">Web designer getting started — one deployed client and counting. I believe in growing through real work, not fake portfolios.</div>
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+  <div class="scroll-hint" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
