@@ -94,11 +94,13 @@ nav{
 .hero-tag{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(232,228,223,.65);max-width:280px;line-height:1.7;
+  margin-top:24px;
 }
 .scroll-hint{
   display:flex;flex-direction:column;align-items:center;gap:8px;
   font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   color:rgba(232,228,223,.6);
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
 }
 .scroll-line{width:1px;height:40px;background:rgba(255,255,255,.12);position:relative;overflow:hidden}
 .scroll-line::after{
@@ -296,7 +298,7 @@ nav{
 }
 .spec-info h5{
   font-family:'Instrument Serif',serif;
-  font-size:26px;font-weight:400;margin-bottom:12px;
+  font-size:clamp(22px,4vw,26px);font-weight:400;margin-bottom:12px;
 }
 .spec-info p{
   font-size:13.5px;line-height:1.7;color:rgba(232,228,223,.7);font-weight:300;
@@ -405,12 +407,14 @@ footer{
   .nav-right{gap:18px}
   .hero{padding:0 20px}
   .hero h1{font-size:clamp(40px,10vw,60px)}
+  .hero-tag{margin-top:32px;font-size:13px}
   .scroll-hint{font-size:10px}
   .scroll-line{height:30px}
   .honest{grid-template-columns:1fr;gap:48px;padding:80px 20px}
   .honest::before{display:none}
   [data-reveal-left]{transform:translateX(-30px)}
   [data-reveal-right]{transform:translateX(30px)}
+  .spec-info h5{font-size:clamp(20px,5vw,24px)}
   .project-section{padding:0 20px 80px}
   .project-showcase{grid-template-columns:1fr}
   .project-visual{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -432,7 +436,7 @@ footer{
 
 <!-- Loader -->
 <div class="loader" id="loader">
-  <div class="loader-text">Portfolio 2026</div>
+  <div class="loader-text">Real Work Incoming</div>
   <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
 </div>
 
@@ -447,9 +451,9 @@ footer{
 
 <section class="hero">
   <div>
-    <div class="hero-line"><h1><span>I design</span></h1></div>
-    <div class="hero-line"><h1><span class="italic">websites</span> <span class="outline">that</span></h1></div>
-    <div class="hero-line"><h1><span>people</span> <span class="italic">remember.</span></h1></div>
+    <div class="hero-line"><h1><span>Designing</span></h1></div>
+    <div class="hero-line"><h1><span class="italic">and developing</span> <span class="outline">high-performance</span></h1></div>
+    <div class="hero-line"><h1><span>websites</span> <span class="italic">that convert.</span></h1></div>
     <div class="hero-tag" style="margin-top:24px;">Crafting digital experiences that resonate with people and drive results for brands.</div>
   </div>
   <div class="scroll-hint" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);">
@@ -467,7 +471,7 @@ footer{
 
 <section class="honest" id="about">
   <div class="honest-left" data-reveal-left>
-    <h2>One client.<br>Real work.<br><i>No faking it.</i></h2>
+    <h2>One shipped store.<br>Real revenue.<br><i>Real results.</i></h2>
     <p>I'm at the beginning of my journey as a web designer, and I'm not going to pretend otherwise. I've shipped one real store for a real client — designed it, built it, launched it. It's live, it's making sales, and I'm proud of it.</p>
     <p style="margin-top:16px">What I lack in years, I make up in hunger. I want to design more, build more, ship more. If you have a project or a team that needs someone eager and willing to grow — I'd love to talk.</p>
   </div>
@@ -522,7 +526,7 @@ footer{
          <div class="spec-badge">Spec Work</div>
       </div>
       <div class="spec-info">
-        <h5>Concept Alpha</h5>
+        <h5>Layout & Interaction Study</h5>
         <p>A layout experimentation focusing on fluid typography and stark contrasts. Built purely to push boundaries and test new interaction patterns.</p>
       </div>
     </div>
@@ -534,7 +538,7 @@ footer{
          <div class="spec-badge">Spec Work</div>
       </div>
       <div class="spec-info">
-        <h5>Concept Beta</h5>
+        <h5>High-Performance Store Interface</h5>
         <p>Exploring high-performance video integrations and asymmetric grids. Designed and coded as a technical playground for modern frontend capabilities.</p>
       </div>
     </div>
@@ -543,7 +547,7 @@ footer{
 
 <section class="skills" data-reveal>
   <div class="section-head">
-    <h3>What I bring</h3>
+    <h3>What sets me apart</h3>
     <span>Ready to grow</span>
   </div>
   <div class="skills-grid">
@@ -583,7 +587,7 @@ footer{
 <div class="h-line" data-reveal></div>
 
 <section class="contact" id="contact">
-  <h2 data-reveal>Let's make<br><i>something real.</i></h2>
+  <h2 data-reveal>Ready to ship something<br><i>that moves the needle?</i></h2>
   <p data-reveal>I'm looking for my next project — freelance, contract, or full-time. If you need websites designed and built with care, reach out. I respond within a day.</p>
   <div class="contact-links" data-reveal>
     <a href="mailto:avenkatvardhan@gmail.com"><span>Email me</span></a>
